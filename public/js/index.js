@@ -1,0 +1,3 @@
+function h() {
+    alert("lll");
+}

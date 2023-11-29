@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(188, 146, 193);
+  display: flex;
+  flex-direction: column;
+  min-width: 480px;
+  min-height: 720px;
+}
+
+.lista {
+  display: flex;
+  background-color: blue;
+  width: 100%;
+}
+
+.select {
+  width: 64px;
+  height: 64px;
+  background-color: rgb(42, 133, 102);
+}
+
+#bloque {
+  background-color: black;
+}
