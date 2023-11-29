@@ -2,22 +2,26 @@ body {
   background-color: rgb(188, 146, 193);
   display: flex;
   flex-direction: column;
-  min-width: 480px;
-  min-height: 720px;
 }
 
 .lista {
+  border-style: solid;
+  border-color: black;
   display: flex;
   background-color: blue;
-  width: 100%;
+  width: 100;
 }
 
 .select {
-  width: 64px;
+  background-color: rgb(71, 148, 123);
+  width: 100%;
   height: 64px;
-  background-color: rgb(42, 133, 102);
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
 }
 
 #bloque {
   background-color: black;
+  height: 50vh;
 }
