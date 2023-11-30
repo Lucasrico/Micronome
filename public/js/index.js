@@ -4,7 +4,7 @@ bloque = document.getElementById("bloque");
 let turn = false
 const botones = 16;
 let seleccionada = 1
-
+let timerid;
 
 let canciones = [
     {
@@ -21,20 +21,10 @@ let canciones = [
     }
 ];
 
-setInterval(() => {
-    turn = turn ? false : true;
-    bloque.style.background = turn ? "#A2D5C6" : "#8B0000";
-    console.log(seleccionada);
-    console.log(canciones);
-    console.log(60000 / canciones[seleccionada - 1].bpm);
-}, 60000 / canciones[seleccionada - 1].bpm);
-
-//ESTE CALCULO NO RULA  , lo he probado en el clg y tarda mas
-
 function seleccionar(id) {
     //Cambiamos el valor de seleccionada para
     //saber a cual modificar el bpm
-    seleccionada = id;
+
     //limpiar todas antes
     for (let i = 1; i <= botones; i++) {
         let casilla = document.getElementById(`c${i}`)
@@ -43,6 +33,9 @@ function seleccionar(id) {
     //pintar seleccionado
     let casilla = document.getElementById(`c${id}`);
     casilla.style.background = "var(--fondo-4)"
+
+    //Reiniciar intervalo
+    cambiarColor(60000 / canciones[id - 1].bpm)
 }
 
 function pintarLista() {
@@ -64,6 +57,14 @@ function pintarLista() {
         str += canciones[i].cancion;
         str += canciones[i].bpm;
         casilla.innerHTML = str;
-        console.log(str);
     }
+}
+
+function cambiarColor(bpm) {
+    if (timerid) {
+        clearTimeout(timerid);
+    }
+    turn = !turn;
+    bloque.style.background = turn ? "#A2D5C6" : "#8B0000";
+    timerid = setTimeout(() => cambiarColor(bpm), bpm);
 }
