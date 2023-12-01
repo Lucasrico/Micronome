@@ -65,6 +65,6 @@ function cambiarColor(bpm) {
         clearTimeout(timerid);
     }
     turn = !turn;
-    bloque.style.background = turn ? "#A2D5C6" : "#8B0000";
+    bloque.style.background = turn ? "var(--fondo-4)" : "#8B0000";
     timerid = setTimeout(() => cambiarColor(bpm), bpm);
 }
