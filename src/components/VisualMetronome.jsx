@@ -101,7 +101,7 @@ const Metronome = ({ data, isPlaying, onPlayPause }) => {
                 >
                     {isPlaying ? 'Pause' : 'Play'}
                 </Button>
-                {/* <Button
+                <Button
                     variant="contained"
                     color="error"
                     onClick={() => {
@@ -109,8 +109,7 @@ const Metronome = ({ data, isPlaying, onPlayPause }) => {
                         window.location.reload(); // Recargar la página para aplicar los cambios
                     }}
                 >
-                    Limpiar LocalStorage
-                </Button> */}
+                    Restaurar cambios                </Button>
             </Box>
         </Box>
     );
