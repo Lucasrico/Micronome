@@ -103,7 +103,6 @@ const Metronome = ({ data, isPlaying, onPlayPause }) => {
                 </Button>
                 <Button
                     variant="contained"
-                    color="error"
                     onClick={() => {
                         localStorage.removeItem('metronomes');
                         window.location.reload(); // Recargar la página para aplicar los cambios
