@@ -1,0 +1,41 @@
+/* Reset básico para evitar inconsistencias entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajustes para que la aplicación use la pantalla completa del dispositivo */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evitar desplazamientos */
+    font-family: 'Arial', sans-serif; /* Fuente base */
+    -webkit-tap-highlight-color: transparent; /* Eliminar el efecto de resaltado en dispositivos móviles */
+    background-color: #f0f0f0; /* Fondo base, puedes cambiarlo */
+}
+
+/* Asegurarse de que los elementos principales usen toda la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustar el comportamiento de los botones e íconos */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus, input:focus, textarea:focus, select:focus {
+    outline: none; /* Eliminar bordes de enfoque en dispositivos móviles */
+}

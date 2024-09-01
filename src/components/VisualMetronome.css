@@ -1,0 +1,140 @@
+.visual-metronome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .metronome-container {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .metronome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background-color 0.1s;
+  }
+  
+  .bpm-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 16px;
+  }
+  
+  .bpm-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 32px;
+  }
+  
+  .bpm-slider {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 32px;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .bpm-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .play-pause-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .play-pause-button:hover {
+    opacity: 0.9;
+  }
+  
+  .controls {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #f3f4f6;
+  }
+  
+  .control-button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .control-button:hover {
+    color: #1f2937;
+  }
+  
+  .control-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .icon-play {
+    width: 0;
+    height: 0;
+    border-left: 16px solid currentColor;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+  
+  .icon-pause {
+    display: flex;
+    width: 16px;
+    justify-content: space-between;
+  }
+  
+  .pause-bar {
+    width: 4px;
+    height: 16px;
+    background-color: currentColor;
+  }
+  
+  .icon-left {
+    width: 0;
+    height: 0;
+    border-right: 12px solid currentColor;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+  
+  .icon-right {
+    width: 0;
+    height: 0;
+    border-left: 12px solid currentColor;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+  
